@@ -40,16 +40,17 @@
           </div>
     </header>
     <main>
- <div class=" w-[70%]  grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:px-12">
+ <section class="lg:px-12 flex flex-col md:flex-row lg:flex-row">
+  <div class="card-container w-[70%]  grid md:grid-cols-2 lg:grid-cols-3 gap-6">
     <div class="card w-full glass mt-3 shadow-2xl">
-        <figure><img src="./image/burger.jpg" alt="car!"/></figure>
+        <figure><img class="h-64 w-full" src="./image/burger.jpg" alt="car!"/></figure>
         <div class="card-body">
-          <h2 class="card-title font-semibold">BURGER</h2>
+          <h2 class="card-title font-semibold" id="food-name">BURGER</h2>
           <p>How to park your car at your garage?</p>
-          <p>Price: <span>120Tk</span></p>
-          <p>Quantity: 5</p>
+          <p>Price: <span id="food-price">120</span>Tk</p>
+          <p>Quantity: <span id="food-quantity">5</span></p>
           <div class="card-actions justify-end">
-            <button class="btn btn-primary">ADD TO CART</button>
+            <button class="btn btn-primary" id="first-cart">ADD TO CART</button>
           </div>
         </div>
       </div>
@@ -59,9 +60,9 @@
           <h2 class="card-title font-semibold">CHICKEN FRY</h2>
           <p>How to park your car at your garage?</p>
           <p>Price: <span>80Tk</span></p>
-          <p>Quantity: 3</p>
+          <p>Quantity: <span>3</span></p>
           <div class="card-actions justify-end">
-            <button class="btn btn-primary">ADD TO CART</button>
+            <button class="btn btn-primary" id="second card">ADD TO CART</button>
           </div>
         </div>
       </div>
@@ -71,21 +72,21 @@
           <h2 class="card-title font-semibold">SANDWICH</h2>
           <p>How to park your car at your garage?</p>
           <p>Price: <span>60Tk</span></p>
-          <p>Quantity: 5</p>
+          <p>Quantity: <span>5</span></p>
           <div class="card-actions justify-end">
-            <button class="btn btn-primary">ADD TO CART</button>
+            <button class="btn btn-primary" id="third card">ADD TO CART</button>
           </div>
         </div>
       </div>
     <div class="card w-full glass mt-3 shadow-2xl">
         <figure><img class="h-64 w-full" src="./image/soup.jpg" alt="car!"/></figure>
         <div class="card-body">
-          <h2 class="card-title font-semibold">SOUP</h2>
+          <h2 class="card-title font-semibold" id="food4-name">SOUP</h2>
           <p>How to park your car at your garage?</p>
-          <p>Price: <span>120Tk</span></p>
-          <p>Quantity: 1</p>
+          <p>Price: <span id="food4-price">120Tk</span></p>
+          <p>Quantity: <span id="food4-quantity">4</span></p>
           <div class="card-actions justify-end">
-            <button class="btn btn-primary">ADD TO CART</button>
+            <button class="btn btn-primary" id="fourth card">ADD TO CART</button>
           </div>
         </div>
       </div>
@@ -95,28 +96,62 @@
           <h2 class="card-title font-semibold">MILKSHAKE</h2>
           <p>How to park your car at your garage?</p>
           <p>Price: <span>150Tk</span></p>
-          <p>Quantity: 5</p>
+          <p>Quantity: <span>7</span></p>
           <div class="card-actions justify-end">
-            <button class="btn btn-primary">ADD TO CART</button>
+            <button class="btn btn-primary" id="fifth card">ADD TO CART</button>
           </div>
         </div>
       </div>
     <div class="card w-full glass mt-3 shadow-2xl">
         <figure><img class="h-64 w-full" src="./image/pasta.jpg" alt="car!"/></figure>
         <div class="card-body">
-          <h2 class="card-title font-semibold">PASTA</h2>
+          <h2 class="card-title font-semibold" id="lastFood-name">PASTA</h2>
           <p>How to park your car at your garage?</p>
-          <p>Price: <span>160Tk</span></p>
-          <p>Quantity: 5</p>
+          <input type="text" id="first-input" placeholder="Price" class="input input-bordered input-sm w-full max-w-xs" />
+          <input type="text" id="second-input" placeholder="Quantity" class="input input-bordered input-sm w-full max-w-xs" />
+
           <div class="card-actions justify-end">
-            <button class="btn btn-primary">ADD TO CART</button>
+            <button class="btn btn-primary" id="last-cart">ADD TO CART</button>
           </div>
         </div>
       </div>
+</div>
+<div class="card-details w-full md:w-[30%] lg:w-[30%] mx-auto mt-3">
+  <h1 class="text-center text-3xl font-bold underline">Total Products: <span>00</span></h1>
+  <!-- creating the table -->
+  <div class="overflow-x-auto">
+    <table class="table">
+      <!-- head -->
+      <thead>
+        <tr>
+          <th>No</th>
+          <th>Name</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Total</th>
+        </tr>
+      </thead>
+      <tbody id="table-container">
+      </tbody>
+    </table>
+  </div>
+  <!-- for table 2 (grand total)-->
+  <div class="overflow-x-auto">
+    <table class="table">
+      <!-- head -->
+      <thead>
+        <tr>
+          <th>Total</th>
+        </tr>
+      </thead>
+      <tbody id="table-container-2">
+      </tbody>
+    </table>
+  </div>
+</div>
 
-      
- </div>
+ </section>
     </main>
-    
+    <script src="./index.js"></script>
 </body>
 </html>
